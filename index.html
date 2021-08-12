@@ -64,9 +64,7 @@
             text-align: center;
             width: 20%;
         }
-
         /*ids in order*/
-
         #header{
             position: relative; 
             display: flex;
@@ -76,19 +74,26 @@
             padding: 0; 
             display: block;
             margin: auto 40px;
-            background: #0f2027; 
-            background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); 
-            background: linear-gradient(to left, #0f2027, #203a43, #2c5364); 
+            background: #0f2027; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #0f2027, #203a43, #2c5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
         }
-
+        /* #header-shape-color{
+      
+        } */
         #header-text-overlay{
+            position: absolute; 
+            top: 50%; 
+            left: 0;
+            right: 0; 
+            transform: translate(0, -50%); 
             text-align: center;
             justify-content: center;
             align-items: center;
             color: #fff; 
             letter-spacing: 1px;
             margin: auto;
-            padding: 12%;
+            padding: ;
         }
         #header-btn{
             position: relative; 
@@ -144,9 +149,7 @@
             list-style:none;
             padding-left: 15px;
         }
-
         /*common attributes*/
-        
         .width-fifty{
             width: 50%;
         }
@@ -180,9 +183,6 @@
         .white-background{
             background-color: #fff;
         }
-        .overlay-spacer{
-            padding-top: 10px;
-        }
     </style>
 </head>
 <body>
@@ -190,9 +190,9 @@
     <header id="header">
         <!--fill these in with the right data for the job-->
         <div id="header-text-overlay"">
-            <h1 class="overlay-spacer">JAMES HESSELL-BOWMAN</h1>
-            <h2 class="overlay-spacer">SOFTWARE DEVELOPER</h2>
-            <h3 class="overlay-spacer">DESIGNING AND BUILDING EFFICIENT APPLICATIONS</h3>
+            <h1>JAMES HESSELL-BOWMAN</h1>
+            <h2>SOFTWARE DEVELOPER</h2>
+            <h3>DESIGNING AND BUILDING EFFICIENT APPLICATIONS</h3>
             <a 
             href="https://lithial.me" 
             target="_blank" 
